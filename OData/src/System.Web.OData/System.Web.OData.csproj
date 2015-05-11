@@ -125,7 +125,7 @@
     <Compile Include="OData\Builder\LowerCamelCaser.cs" />
     <Compile Include="OData\Builder\NameResolverOptions.cs" />
     <Compile Include="OData\Builder\NullableEnumTypeConfiguration.cs" />
-    <Compile Include="OData\Builder\ODataConventionModelBuilderExtensions.cs" />
+    <Compile Include="OData\Builder\ODataModelBuilderExtensions.cs" />
     <Compile Include="OData\Builder\OperationTitleAnnotation.cs" />
     <Compile Include="OData\Builder\DynamicPropertyDictionaryAnnotation.cs" />
     <Compile Include="OData\ETagMessageHandler.cs" />

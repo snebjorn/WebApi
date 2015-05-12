@@ -39,10 +39,9 @@ namespace System.Web.Http.OData.Builder
         }
 
         /// <summary>
-        /// This action is invoked after the <see cref="ODataModelBuilder"/> has run all the conventions, but before the configuration is locked
+        /// This action is invoked before the configuration is locked
         /// down and used to build the <see cref="IEdmModel"/>.
         /// </summary>
-        /// <remarks>Use this action to modify the <see cref="ODataModelBuilder"/> configuration that has been inferred by convention.</remarks>
         public Action<ODataModelBuilder> OnModelCreating { get; set; }
 
         /// <summary>

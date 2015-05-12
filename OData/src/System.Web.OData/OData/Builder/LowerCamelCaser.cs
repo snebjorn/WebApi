@@ -10,7 +10,7 @@ using System.Text;
 namespace System.Web.OData.Builder
 {
     /// <summary>
-    /// Default lower camel caser to resolve property names for <see cref="ODataConventionModelBuilder"/>.
+    /// Default lower camel caser to resolve property names for <see cref="ODataModelBuilder"/>.
     /// The rule is to convert the leading upper case characters to lower case, 
     /// until a character, which is not the first character and is followed by a non-upper case character, is met.
     /// id => id, ID => id, MyName => myName, IOStream => ioStream, MyID => myid, yourID => yourID
@@ -41,9 +41,9 @@ namespace System.Web.OData.Builder
         /// <summary>
         /// Applies lower camel case.
         /// </summary>
-        /// <param name="builder">The <see cref="ODataConventionModelBuilder"/> to be applied on.</param>
+        /// <param name="builder">The <see cref="ODataModelBuilder"/> to be applied on.</param>
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Justification = "Explicit Expression generic type is more clear")]
-        public void ApplyLowerCamelCase(ODataConventionModelBuilder builder)
+        public void ApplyLowerCamelCase(ODataModelBuilder builder)
         {
             foreach (StructuralTypeConfiguration typeConfiguration in builder.StructuralTypes)
             {

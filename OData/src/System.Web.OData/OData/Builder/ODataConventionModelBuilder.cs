@@ -108,13 +108,6 @@ namespace System.Web.OData.Builder
         /// </summary>
         public bool ModelAliasingEnabled { get; set; }
 
-        /// <summary>
-        /// This action is invoked after the <see cref="ODataConventionModelBuilder"/> has run all the conventions, but before the configuration is locked
-        /// down and used to build the <see cref="IEdmModel"/>.
-        /// </summary>
-        /// <remarks>Use this action to modify the <see cref="ODataModelBuilder"/> configuration that has been inferred by convention.</remarks>
-        public Action<ODataConventionModelBuilder> OnModelCreating { get; set; }
-
         internal void Initialize(IAssembliesResolver assembliesResolver, bool isQueryCompositionMode)
         {
             _isQueryCompositionMode = isQueryCompositionMode;
@@ -267,11 +260,6 @@ namespace System.Web.OData.Builder
             foreach (ProcedureConfiguration procedure in Procedures)
             {
                 ApplyProcedureConventions(procedure);
-            }
-
-            if (OnModelCreating != null)
-            {
-                OnModelCreating(this);
             }
 
             return base.GetEdmModel();

@@ -43,6 +43,12 @@ namespace System.Web.OData.Builder
         }
 
         /// <summary>
+        /// This action is invoked just before the configuration is locked
+        /// down and used to build the <see cref="IEdmModel"/>.
+        /// </summary>
+        public Action<ODataModelBuilder> OnModelCreating { get; set; }
+
+        /// <summary>
         /// Gets or sets the namespace that will be used for the resulting model
         /// </summary>
         public string Namespace { get; set; }
@@ -588,6 +594,11 @@ namespace System.Web.OData.Builder
         [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Property is not appropriate, method does work")]
         public virtual IEdmModel GetEdmModel()
         {
+            if (OnModelCreating != null)
+            {
+                OnModelCreating(this);
+            }
+
             IEdmModel model = EdmModelHelperMethods.BuildEdmModel(this);
             ValidateModel(model);
             return model;

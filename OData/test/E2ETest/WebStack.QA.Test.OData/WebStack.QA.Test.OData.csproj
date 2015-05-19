@@ -142,6 +142,7 @@
     <Compile Include="Batch\Client\UnbufferedBatchGeneratedClient.cs" />
     <Compile Include="Batch\Tests\DataServicesClient\DefaultODataBatchHandlerTests.cs" />
     <Compile Include="Batch\Tests\DataServicesClient\UnbufferedODataBatchHandlerTests.cs" />
+    <Compile Include="ComplexTypeInheritance\ComplexTypeInheritanceSerializeTest.cs" />
     <Compile Include="DateAndTimeOfDay\DateAndTimeOfDayContext.cs" />
     <Compile Include="DateAndTimeOfDay\DateAndTimeOfDayController.cs" />
     <Compile Include="DateAndTimeOfDay\DateAndTimeOfDayEdmModel.cs" />
@@ -859,6 +860,7 @@
     <Compile Include="Routing\RefRoutingConventionTests.cs" />
     <Compile Include="Routing\ODataRouteTests.cs" />
     <Compile Include="Routing\ODataValueProviderTests.cs" />
+    <Compile Include="Routing\UnqualifiedNameCallRoutingTests.cs" />
     <Compile Include="BoundOperation\BoundOperationController.cs" />
     <Compile Include="BoundOperation\BoundOperationDataModel.cs" />
     <Compile Include="BoundOperation\BoundOperationEdmModel.cs" />
